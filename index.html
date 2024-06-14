@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Los mejores tenis del estado</title>
+    <style>
+        /* Estilos adicionales */
+        .producto {
+            border: 2px solid #4CAF50; /* Borde verde */
+            border-radius: 15px; /* Bordes redondeados */
+            padding: 20px; /* Espaciado interno */
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* Sombra */
+            transition: 0.3s; /* Transición suave */
+            background-color: #f9f9f9; /* Fondo */
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .producto:hover {
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2); /* Sombra más pronunciada al pasar el ratón */
+        }
+
+        img {
+            cursor: pointer;
+            width: 400px; /* Establecer ancho de las imágenes a 400px */
+        }
+
+        /* Cambiar el fondo del cuerpo del documento */
+        body {
+            font-family: Algerian, sans-serif;
+            background: linear-gradient(to bottom, #ff6f61, #ffcccb, #ffeead, #b5e7a0); /* Degradado de fondo */
+            background-size: cover; /* Cubrir todo el fondo */
+            background-repeat: no-repeat; /* Evita que el degradado se repita */
+            background-attachment: fixed; /* Fija el fondo */
+            margin: 0; /* Elimina los márgenes predeterminados */
+            padding-top: 50px; /* Añade espacio para la barra fija */
+        }
+
+        .barra {
+            width: 100%;
+            height: 50px;
+            background-color: rgba(0, 0, 0, 0.7); /* Barra semitransparente */
+            color: white;
+            text-align: center;
+            line-height: 50px; /* Centra el texto verticalmente */
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .barra a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .ubicacion {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .comentarios {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        /* Estilos para el carrito de compras */
+        #carrito {
+            position: fixed;
+            top: 70px;
+            right: 20px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        #carrito h2 {
+            margin-top: 0;
+        }
+
+        #lista-carrito {
+            list-style: none;
+            padding: 0;
+        }
+
+        #lista-carrito li {
+            margin-bottom: 10px;
+        }
+
+        #total {
+            font-weight: bold;
+        }
+
+        #btn-mostrar-compras {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        #btn-mostrar-compras:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <div class="barra">
+        <a href="#inicio">Inicio</a>
+        <a href="#productos">Productos</a>
+        <a href="#blog">Blog</a>
+    </div>
+
+    <!-- Contenido del sitio web -->
+    <center>
+        <!-- Encabezado -->
+        <header>
+            <img src="0.Gif" alt="Logo de Mi Tienda">
+            <h1></h1>
+            <p></p>
+            <!-- Menús -->
+            <nav>
+                <ul>
+                    <!-- Aquí puedes agregar elementos de menú si es necesario -->
+                </ul>
+            </nav>
+        </header>
+    </center>
+    <center>
+        <!-- Página de Inicio -->
+        <section id="inicio">
+            <h2>Bienvenidos a Mi Tienda (𝑺𝑵𝑬𝑨𝑲𝑬𝑹 𝑺𝑻𝑶𝑹𝑬)</h2>
+            <img src="9.jpg" alt="Bienvenidos a la mejor tienda de snikers">
+            <p>Descubre nuestros productos exclusivos y las mejores ofertas.</p>
+            <!-- CTA -->
+            <button onclick="window.location.href='#productos'">Ver Productos</button>
+        </section>
+    </center>
+    <center>
+        <!-- Productos/Servicios -->
+        <section id="productos">
+            <h2>Nuestros Productos</h2>
+            <!-- Producto 1 -->
+            <div class="producto">
+                <img src="3.jpg" alt="Producto 1">
+                <div>
+                    <h3>Producto 1</h3>
+                    <p>AIR FORCE ONE. Precio: $2350 talla mx: 24-29</p>
+                    <button class="btn-agregar" data-nombre="AIR FORCE ONE" data-precio="2350">Agregar al Carrito</button>
+                </div>
+            </div>
+            <!-- Producto 2 -->
+            <div class="producto">
+                <img src="4.jpg" alt="Producto 2">
+                <div>
+                    <h3>Producto 2</h3>
+                    <p>Nike Air Mag (Edicion Liminitada de "Volver al futuro"). Precio: $92,000 talla mx: 24-30 </p>
+                    <button class="btn-agregar" data-nombre="Nike Air Mag" data-precio="92000">Agregar al Carrito</button>
+                </div>
+            </div>
+            <!-- Producto 3 -->
+            <div class="producto">
+                <img src="6.jpg" alt="Producto 3">
+                <div>
+                    <h3>Producto 3</h3>
+                    <p>Tenis LV Trainer. Precio: $26,200.00 talla mx: 24-28</p>
+                    <button class="btn-agregar" data-nombre="Tenis LV Trainer" data-precio="26200">Agregar al Carrito</button>
+                </div>
+            </div>
+            <!-- Producto 4 -->
+            <div class="producto">
+                <img src="11.jpg" alt="Producto 4">
+                <div>
+                    <h3>Producto 4</h3>
+                    <p>Tenis LV Groovy con plataforma. Precio: $23,000.00 talla mx: 23-29</p>
+                    <button class="btn-agregar" data-nombre="Tenis LV Groovy con plataforma" data-precio="23000">Agregar al Carrito</button>
+                </div>
+            </div>
+            <!-- Producto 5 -->
+            <div class="producto">
+                <img src="12.jpg" alt="Producto 5">
+                <div>
+                    <h3>Producto 5</h3>
+                    <p>Nike Air Force 1 Low Louis Vuitton Monogram Brown Damier Azur. Precio: $6,471,100 talla mx: 27-29</p>
+                    <button class="btn-agregar" data-nombre="Nike Air Force 1 Low Louis Vuitton" data-precio="6471100">Agregar al Carrito</button>
+                </div>
+            </div>
+            <!-- Producto 6 -->
+            <div class="producto">
+                <img src="13.jpg" alt="Producto 6">
+                <div>
+                    <h3>Producto 6</h3>
+                    <p>TENIS NIKE SB DUNK LOW JARRITOS. $4,959.00 talla mx: 25-29</p>
+                    <button class="btn-agregar" data-nombre="NIKE SB DUNK LOW JARRITOS" data-precio="4959">Agregar al Carrito</button>
+                </div>
+            </div>
+            <!-- Producto 7 -->
+            <div class="producto">
+                <img src="14.jpg" alt="Producto 7">
+                <div>
+                    <h3>Producto 7</h3>
+                    <p>Jordan 4 Retro Eminem Carhartt. Precio: $466,200.00 talla mx: 24-29</p>
+                    <button class="btn-agregar" data-nombre="Jordan 4 Retro Eminem Carhartt" data-precio="466200">Agregar al Carrito</button>
+                </div>
+            </div>
+            <!-- Producto 8 -->
+            <div class="producto">
+                <img src="15.jpg" alt="Producto 8">
+                <div>
+                    <h3>Producto 8</h3>
+                    <p>Alexander McQueen tenis oversize con suela gruesa. Precio: $16,200.00 talla mx: 24-29</p>
+                    <button class="btn-agregar" data-nombre="Alexander McQueen tenis oversize" data-precio="16200">Agregar al Carrito</button>
+                </div>
+            </div>
+            <!-- Producto 9 -->
+            <div class="producto">
+                <img src="16.jpg" alt="Producto 9">
+                <div>
+                    <h3>Producto 9</h3>
+                    <p>Gucci tenis Rhyton. Precio: $15,300.00 talla mx: 23-29 </p>
+                    <button class="btn-agregar" data-nombre="Gucci tenis Rhyton" data-precio="15300">Agregar al Carrito</button>
+                </div>
+            </div>
+            <!-- Producto 10 -->
+            <div class="producto">
+                <img src="17.jpg" alt="Producto 10">
+                <div>
+                    <h3>Producto 10</h3>
+                    <p>Jordan tenis Air Jordan 12 Retro. Precio: $10,300.00 talla mx: 23-26</p>
+                    <button class="btn-agregar" data-nombre="Jordan tenis Air Jordan 12 Retro" data-precio="10300">Agregar al Carrito</button>
+                </div>
+            </div>
+            <!-- Producto 11 -->
+            <div class="producto">
+                <img src="18.jpg" alt="Producto 11">
+                <div>
+                    <h3>Producto 11</h3>
+                    <p>Jordan 2 Retro x J. Balvin Blue 2022. Precio: $6,300.00 talla mx: 24-28</p>
+                    <button class="btn-agregar" data-nombre="Jordan 2 Retro x J. Balvin Blue 2022" data-precio="6300">Agregar al Carrito</button>
+                </div>
+            </div>
+            <!-- Producto 12 -->
+            <div class="producto">
+                <img src="19.jpg" alt="Producto 12">
+                <div>
+                    <h3>Producto 12</h3>
+                    <p>adidas Forum Low Bad Bunny. Precio: $15,350.00 talla mx: 24-29</p>
+                    <button class="btn-agregar" data-nombre="adidas Forum Low Bad Bunny" data-precio="15350">Agregar al Carrito</button>
+                </div>
+            </div>
+            <!-- Producto 13 -->
+            <div class="producto">
+                <img src="20.jpg" alt="Producto 13">
+                <div>
+                    <h3>Producto 13</h3>
+                    <p>Botas de astroboy. Precio: $20,300.00 talla mx: 26</p>
+                    <button class="btn-agregar" data-nombre="Botas de astroboy" data-precio="20300">Agregar al Carrito</button>
+                </div>
+            </div>
+            <!-- Producto 14 -->
+            <div class="producto">
+                <img src="21.jpg" alt="Producto 14">
+                <div>
+                    <h3>Producto 14</h3>
+                    <p>Off-White tenis con agujetas Out Of Office. Precio: $11,400.00 talla mx: 24-29</p>
+                    <button class="btn-agregar" data-nombre="Off-White tenis con agujetas Out Of Office" data-precio="11400">Agregar al Carrito</button>
+                </div>
+            </div>
+ <!-- Producto 15 -->
+            <div class="producto">
+                <img src="22.jpg" alt="Producto 15">
+                <div>
+                    <h3>Producto 15</h3>
+                    <p> ZAPATILLAS ODISSEA precio: $20,700 talla mx: 24-28</p>
+                    <button class="btn-agregar" data-nombre="ZAPATILLAS ODISSEA" data-precio="20700">Agregar al Carrito</button>
+                </div>
+            </div>
+ <!-- Producto 16 -->
+            <div class="producto">
+                <img src="23.jpg" alt="Producto 16">
+                <div>
+                    <h3>Producto 16</h3>
+                    <p> PHILIPP PLEIN X SNOOP DOGG PLEINDOGG PLP-USC0468 Precio: $126,200.00 talla mx: 24-28</p>
+                    <button class="btn-agregar" data-nombre="PHILIPP PLEIN X SNOOP DOGG PLEINDOGG PLP-USC0468" data-precio="126200">Agregar al Carrito</button>
+                </div>
+            </div>
+ <!-- Producto 17 -->
+            <div class="producto">
+                <img src="24.jpg" alt="Producto 17">
+                <div>
+                    <h3>Producto 17</h3>
+                    <p>PHILIPP PLEIN SNEAKERS RUNNER SKELETON PARA HOMBRE PLP-MSC3695 Precio: $69,600.00 talla mx: 27-28</p>
+                    <button class="btn-agregar" data-nombre="PHILIPP PLEIN SNEAKERS RUNNER SKELETON PARA HOMBRE PLP-MSC3695" data-precio="69600">Agregar al Carrito</button>
+                </div>
+            </div>
+<!-- Producto 18 -->
+            <div class="producto">
+                <img src="25.jpg" alt="Producto 18">
+                <div>
+                    <h3>Producto 18</h3>
+                    <p> Disney Tenis con luz para niños Lightning McQueen Cars Precio: $7,600.00 talla mx: 20-23</p>
+                    <button class="btn-agregar" data-nombre="Disney Tenis con luz para niños Lightning McQueen Cars" data-precio="7600">Agregar al Carrito</button>
+                </div>
+            </div>
+<!-- Producto 19 -->
+            <div class="producto">
+                <img src="26.jpg" alt="Producto 19">
+                <div>
+                    <h3>Producto 19</h3>
+                    <p>Running sneakers Precio: $11,500.00 talla mx: 27-28</p>
+                    <button class="btn-agregar" data-nombre="Running sneakers" data-precio="11500">Agregar al Carrito</button>
+                </div>
+            </div>
+
+        </section>
+    </center>
+
+    <!-- Sobre Nosotros -->
+    <section id="nosotros">
+        <h2>Sobre Nosotros</h2>
+        <p>Somos una empresa dedicada a ofrecer el mejor calzado exclusivo.</p>
+        <!-- Localización (Google Maps) -->
+        <div class="ubicacion">
+            <h3>Encuéntranos aquí</h3>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119480.28547923299!2d-100.55811290273435!3d20.6386811!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d35a577888efbf%3A0x7ecc7bd4410eabd4!2sCETis%2016!5e0!3m2!1ses-419!2smx!4v1715301609446!5m2!1ses-419!2smx"
+                width="400"
+                height="300"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </section>
+
+    <!-- Comentarios -->
+    <section id="comentarios">
+        <h2>Comentarios</h2>
+        <div class="comentarios">
+            <form onsubmit="agregarComentario(); return false;">
+                <label for="comentario">Agregar Comentario:</label>
+                <textarea id="comentario" name="comentario"></textarea>
+                <br>
+                <button type="submit">Enviar</button>
+            </form>
+            <div id="lista-comentarios"></div>
+        </div>
+    </section>
+
+    <!-- Script para manejar el carrito de compras -->
+    <script>
+        function agregarComentario() {
+            var comentario = document.getElementById('comentario').value;
+            var listaComentarios = document.getElementById('lista-comentarios');
+            var nuevoComentario = document.createElement('p');
+            nuevoComentario.textContent = comentario;
+            listaComentarios.appendChild(nuevoComentario);
+            document.getElementById('comentario').value = '';
+        }
+
+        // Función para agregar un producto al carrito
+        function agregarAlCarrito(nombre, precio) {
+            // Crear elemento de lista para mostrar el producto en el carrito
+            var listaCarrito = document.getElementById('lista-carrito');
+            var nuevoItem = document.createElement('li');
+            nuevoItem.textContent = nombre + ' - $' + precio;
+            listaCarrito.appendChild(nuevoItem);
